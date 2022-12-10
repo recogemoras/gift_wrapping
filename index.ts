@@ -3,7 +3,7 @@ const gifts = ['cat', 'game', 'socks']
 const wrapped = wrapping(gifts)
 
 function wrapping(gifts) {
-    var arrayItems = gifts.length
+    let arrayItems = gifts.length
     const wrapped: string [] = []
     for (let i = 0; i < arrayItems; i++) {
         wrapped.push(wrapGift(gifts[i]))

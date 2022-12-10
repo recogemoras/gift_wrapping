@@ -1,7 +1,7 @@
 {
   "version": 3,
   "sources": ["../index.ts"],
-  "sourcesContent": ["\nconst gifts = ['cat', 'game', 'socks']\nconst wrapped = wrapping(gifts)\n\nfunction wrapping(gifts) {\n    const wrapped: string [] = []\n    for (let i in gifts) {\n        let asteriscos = \"**\";\n        for (let j of gifts[i]) {\n            asteriscos += \"*\"\n        }\n        wrapped.push(asteriscos + \"\\n*\" + gifts[i] + \"*\\n\" + asteriscos)\n    }\n    return wrapped\n}\nconsole.log(wrapped)"],
-  "mappings": "AACA,MAAM,QAAQ,CAAC,OAAO,QAAQ;AAC9B,MAAM,UAAU,SAAS;AAEzB,kBAAkB,QAAO;AACrB,QAAM,WAAqB;AAC3B,WAAS,KAAK,QAAO;AACjB,QAAI,aAAa;AACjB,aAAS,KAAK,OAAM,IAAI;AACpB,oBAAc;AAAA;AAElB,aAAQ,KAAK,aAAa,QAAQ,OAAM,KAAK,QAAQ;AAAA;AAEzD,SAAO;AAAA;AAEX,QAAQ,IAAI;",
+  "sourcesContent": ["\nconst gifts = ['cat', 'game', 'socks']\nconst wrapped = wrapping(gifts)\n\nfunction wrapping(gifts) {\n    let wrapped: string [] = []\n    for (let i in gifts) {\n        let asteriscos = gifts[i].replace(new RegExp(/./g), \"*\") + \"**\";\n        /*\n        for (let j of gifts[i]) {\n            asteriscos += \"*\"\n        }\n        */\n        wrapped.push(asteriscos + \"\\n*\" + gifts[i] + \"*\\n\" + asteriscos)\n    }\n    return wrapped\n}\nconsole.log(wrapped)"],
+  "mappings": "AACA,MAAM,QAAQ,CAAC,OAAO,QAAQ;AAC9B,MAAM,UAAU,SAAS;AAEzB,kBAAkB,QAAO;AACrB,MAAI,WAAqB;AACzB,WAAS,KAAK,QAAO;AACjB,QAAI,aAAa,OAAM,GAAG,QAAQ,IAAI,OAAO,OAAO,OAAO;AAM3D,aAAQ,KAAK,aAAa,QAAQ,OAAM,KAAK,QAAQ;AAAA;AAEzD,SAAO;AAAA;AAEX,QAAQ,IAAI;",
   "names": []
 }

@@ -4,10 +4,10 @@ const wrapped = wrapping(gifts)
 
 function wrapping(gifts) {
     let wrapped: string [] = [], regexp: RegExp = /./g
-    for (let i in gifts) {
-        let asteriscos = gifts[i].replace(regexp, "*") + "**";
-        wrapped.push(asteriscos + "\n*" + gifts[i] + "*\n" + asteriscos)
-    }
+    gifts.forEach(function (gift) {
+        let asteriscos = gift.replace(regexp, "*") + "**";
+        wrapped.push(asteriscos + "\n*" + gift + "*\n" + asteriscos)
+    })
     return wrapped
 }
 console.log(wrapped)

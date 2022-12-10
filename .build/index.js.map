@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../index.ts"],
+  "sourcesContent": ["\nconst gifts = ['cat', 'game', 'socks']\nconst wrapped = wrapping(gifts)\n\nfunction wrapping(gifts) {\n    var arrayItems = gifts.length\n    const wrapped: string [] = []\n    for (let i = 0; i < arrayItems; i++) {\n        let giftLength = gifts[i].length\n        let wrappedGift: String = \"**\"\n\n        for (let i=0; i<giftLength; ++i) {\n            wrappedGift += \"*\"\n        }\n        \n        wrappedGift += (\"\\n*\" + gifts[i] + \"*\\n**\")  \n\n\n        for (let i=0; i<giftLength; ++i) {\n            wrappedGift += \"*\"\n        }\n        \n        wrapped.push(wrappedGift)\n        //console.log(wrapped)\n    }\n    return wrapped\n}\n\n\nconsole.log(wrapped)"],
+  "mappings": "AACA,MAAM,QAAQ,CAAC,OAAO,QAAQ;AAC9B,MAAM,UAAU,SAAS;AAEzB,kBAAkB,QAAO;AACrB,MAAI,aAAa,OAAM;AACvB,QAAM,WAAqB;AAC3B,WAAS,IAAI,GAAG,IAAI,YAAY,KAAK;AACjC,QAAI,aAAa,OAAM,GAAG;AAC1B,QAAI,cAAsB;AAE1B,aAAS,KAAE,GAAG,KAAE,YAAY,EAAE,IAAG;AAC7B,qBAAe;AAAA;AAGnB,mBAAgB,QAAQ,OAAM,KAAK;AAGnC,aAAS,KAAE,GAAG,KAAE,YAAY,EAAE,IAAG;AAC7B,qBAAe;AAAA;AAGnB,aAAQ,KAAK;AAAA;AAGjB,SAAO;AAAA;AAIX,QAAQ,IAAI;",
+  "names": []
+}

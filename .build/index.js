@@ -3,8 +3,8 @@ const wrapped = wrapping(gifts);
 function wrapping(gifts2) {
   const wrapped2 = [];
   for (let i in gifts2) {
-    let giftLength = gifts2[i].length, asteriscos = "**";
-    for (let j = 0; j < giftLength; ++j) {
+    let asteriscos = "**";
+    for (let j of gifts2[i]) {
       asteriscos += "*";
     }
     wrapped2.push(asteriscos + "\n*" + gifts2[i] + "*\n" + asteriscos);

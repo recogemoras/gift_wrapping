@@ -4,18 +4,22 @@ function wrapping(gifts2) {
   var arrayItems = gifts2.length;
   const wrapped2 = [];
   for (let i = 0; i < arrayItems; i++) {
-    let giftLength = gifts2[i].length;
-    let wrappedGift = "**";
-    for (let i2 = 0; i2 < giftLength; ++i2) {
-      wrappedGift += "*";
-    }
-    wrappedGift += "\n*" + gifts2[i] + "*\n**";
-    for (let i2 = 0; i2 < giftLength; ++i2) {
-      wrappedGift += "*";
-    }
-    wrapped2.push(wrappedGift);
+    wrapped2.push(wrapGift(gifts2[i]));
   }
   return wrapped2;
+}
+function wrapGift(gift) {
+  let wrappedGift = asteriscs(gift);
+  wrappedGift += "\n*" + gift + "*\n";
+  return wrappedGift += asteriscs(gift);
+}
+function asteriscs(gift) {
+  let giftLength = gift.length;
+  let asteriscs2 = "**";
+  for (let i = 0; i < giftLength; ++i) {
+    asteriscs2 += "*";
+  }
+  return asteriscs2;
 }
 console.log(wrapped);
 //# sourceMappingURL=index.js.map
